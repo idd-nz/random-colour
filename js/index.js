@@ -70,7 +70,7 @@ let randomBtn = document.querySelector(`.randomize`)
 randomBtn.addEventListener('click', (event) => {
   //Step 1//
   let colourR = Math.floor(Math.random() * 256)
-  let colourG= Math.floor(Math.random() * 256)
+  let colourG = Math.floor(Math.random() * 256)
   let colourB = Math.floor(Math.random() * 256)
 
   // console.log(colourR, colourG, colourB);

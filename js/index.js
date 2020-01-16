@@ -22,11 +22,11 @@ Let's start with one of the macro steps...
 //   5. Put them in the console to ensure they're not the same, refresh repeatedly
 //   6. Format the number into a string and test in the console: rgb(#, #, #)
 
-let colourRed =   Math.floor(Math.random() * 256);
-let colourGreen = Math.floor(Math.random() * 256);
-let colourBlue =  Math.floor(Math.random() * 256);
+    // let colourRed =   Math.floor(Math.random() * 256);
+    // let colourGreen = Math.floor(Math.random() * 256);
+    // let colourBlue =  Math.floor(Math.random() * 256);
 
-console.log(`rgb(${colourRed}, ${colourGreen}, ${colourBlue})`);
+    // console.log(`rgb(${colourRed}, ${colourGreen}, ${colourBlue})`);
 
 /*  Breakdown of the random number code (the right side of = assignment):
 - Math.random()
@@ -45,3 +45,45 @@ console.log(`rgb(${colourRed}, ${colourGreen}, ${colourBlue})`);
 // - Once determined, break each step down into micro steps
 // - Test each macro solution in isolation (console output helps)
 // - Begin to combine the steps together to create a final solution (test as you go!)
+
+    // in-class
+// let r = Math.random() * 256;
+// console.log(r);
+
+// let dec = Math.random() * 256;
+// let int = Math.floor(dec);
+// console.log(dec.int);
+
+// Step 1: Randomize the colours//
+// let colourR = Math.floor(Math.random() * 256)
+// let colourG= Math.floor(Math.random() * 256)
+// let colourB = Math.floor(Math.random() * 256)
+
+// console.log(colourR, colourG, colourB);
+
+//Step 2: button clickable//
+//A) find the buttom//
+// let randomBtn = document.querySelector(`.randomize`)
+//B) assign click listener//
+//C) output a msg//
+let randomBtn = document.querySelector(`.randomize`)
+randomBtn.addEventListener('click', (event) => {
+  //Step 1//
+  let colourR = Math.floor(Math.random() * 256)
+  let colourG= Math.floor(Math.random() * 256)
+  let colourB = Math.floor(Math.random() * 256)
+
+  // console.log(colourR, colourG, colourB);
+  console.log(`rgb(${colourR},${colourG},${colourB})`)
+
+  //Step 3//
+  let bodyElement = document.querySelector('body')
+  bodyElement.style.backgroundColor = `rgb(${colourR},${colourG},${colourB})`;
+})
+
+//Step 3: change the BG//
+//A) find the body
+// let bodyElement = document.querySelector('body')
+//B) assign a color tpo the BG
+// bodyElement.style.backgroundColor = '';
+
